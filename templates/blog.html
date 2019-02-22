@@ -9,6 +9,12 @@
 <body>
     <h1><center>INI BLOG SAYA</center></h1>
     {% include "menu.html" %}
+
+    <ul>
+        {% for blog in blogs %}
+           <li>{{ blog.judul}} - {{ blog.tanggal}} </li>
+        {% endfor %}
+    </ul>
       
 </body>
 </html>

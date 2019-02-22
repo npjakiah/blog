@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.shortcuts import render, HttpResponse
+from blog.models import Artikel
 
 # Create your views here.
 def home(request):
@@ -15,4 +16,5 @@ def kontak(request):
     return render(request, 'contact.html')      
 
 def blog(request):
-    return render(request, 'blog.html') 
+    blogs = Artikel.objects.all()
+    return render(request, 'blog.html', {'blogs':blogs}) 
