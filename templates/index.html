@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Jakiah</title>
+</head>
+<body>
+      <h1><center>SELAMAT DATANG DI BLOG SAYA</center></h1>
+      {% include "menu.html" %}
+
+      {{ nama }}
+
+        {% for buah in buah %}
+           <li>{{ buah }}</li>
+        {% endfor %}
+
+        {% if False %}
+             <h1>If bernilai TRUE, maka AKU ADA</h1>
+        {% endif %}       
+
+      
+</body>
+</html>
